@@ -3,183 +3,225 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Something Special ❤️</title>
+<title>Surprise For You ❤️👸🏻</title>
 
 <style>
-    * {
-        margin: 0;
-        padding: 0;
-        box-sizing: border-box;
-        font-family: Arial, sans-serif;
-    }
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:Arial,sans-serif;
+}
 
-    body {
-        background: linear-gradient(135deg, #ff758c, #ff7eb3);
-        min-height: 100vh;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        color: white;
-        text-align: center;
-        padding: 20px;
-    }
+body{
+    background: linear-gradient(135deg,#ff758c,#ff7eb3);
+    min-height:100vh;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    color:white;
+    text-align:center;
+    padding:20px;
+}
 
-    .container {
-        max-width: 700px;
-        width: 100%;
-        background: rgba(255,255,255,0.15);
-        backdrop-filter: blur(10px);
-        border-radius: 20px;
-        padding: 40px;
-    }
+.container{
+    max-width:700px;
+    width:100%;
+    background:rgba(255,255,255,0.15);
+    backdrop-filter:blur(10px);
+    border-radius:20px;
+    padding:40px;
+}
 
-    h1 {
-        margin-bottom: 20px;
-    }
+h1{
+    margin-bottom:20px;
+}
 
-    #countdown {
-        font-size: 2rem;
-        font-weight: bold;
-        margin: 20px 0;
-    }
+#countdown{
+    font-size:2rem;
+    font-weight:bold;
+    margin:20px 0;
+}
 
-    input {
-        width: 100%;
-        padding: 12px;
-        border: none;
-        border-radius: 10px;
-        margin-top: 15px;
-        font-size: 1rem;
-    }
+input{
+    width:100%;
+    padding:12px;
+    border:none;
+    border-radius:10px;
+    margin-top:15px;
+    font-size:1rem;
+}
 
-    button {
-        margin-top: 15px;
-        padding: 12px 25px;
-        border: none;
-        border-radius: 10px;
-        background: white;
-        color: #ff4f87;
-        font-weight: bold;
-        cursor: pointer;
-    }
+button{
+    margin-top:15px;
+    padding:12px 25px;
+    border:none;
+    border-radius:12px;
+    background:white;
+    color:#ff4f87;
+    font-weight:bold;
+    cursor:pointer;
+}
 
-    button:hover {
-        opacity: 0.9;
-    }
+button:hover{
+    opacity:0.9;
+}
 
-    #secret {
-        display: none;
-        margin-top: 30px;
-    }
+.error{
+    margin-top:15px;
+}
 
-    #spotifyCode {
-        max-width: 100%;
-        border-radius: 15px;
-        margin-top: 20px;
-    }
+#secret{
+    display:none;
+    justify-content:center;
+    align-items:center;
+    opacity:0;
+}
 
-    .error {
-        color: #ffe5e5;
-        margin-top: 10px;
+#spotifyCode{
+    width:90%;
+    max-width:600px;
+    border-radius:20px;
+}
+
+@keyframes fadeIn{
+    from{
+        opacity:0;
     }
+    to{
+        opacity:1;
+    }
+}
 </style>
 </head>
+
 <body>
 
 <div class="container">
-    <div id="lockedContent">
-        <h1>❤️ A Surprise Is Waiting ❤️</h1>
-        <p>Countdown until your special reveal...</p>
 
-        <div id="countdown"></div>
+<div id="lockedContent">
 
-        <h3>Or enter the secret password:</h3>
+<div style="font-size:40px; margin-bottom:20px;">
+🍒 🐶 🍒 🐶 🍒
+</div>
 
-        <input
-            type="password"
-            id="password"
-            placeholder="Enter password"
-        >
+<h1>👸🏿 Surprise For You ❤️</h1>
 
-        <button onclick="checkPassword()">Unlock</button>
+<p>Something special is waiting...</p>
 
-        <div class="error" id="error"></div>
-    </div>
+<div id="countdown"></div>
 
-    <div id="secret">
-        <h1>✈️ We're Going To New York! 🗽</h1>
+<h3>Or enter the secret password:</h3>
 
-        <p>
-            Surprise! Pack your bags ❤️
-        </p>
+<input
+type="password"
+id="password"
+placeholder="Enter password">
 
-        <!-- Replace with your Spotify Code image -->
-        <img
-            id="spotifyCode"
-            src="spotify-code.png"
-            alt="Spotify Code"
-        >
+<button onclick="checkPassword()">
+Unlock ❤️
+</button>
 
-        <p style="margin-top:20px;">
-            Scan this Spotify code to reveal your song 🎵
-        </p>
-    </div>
+<div class="error" id="error"></div>
+
+<div style="font-size:40px; margin-top:25px;">
+🐶 🍒 🐶 🍒 🐶
+</div>
+
+</div>
+
+<div id="secret">
+    <img
+    id="spotifyCode"
+    src="spotify-code.png"
+    alt="Spotify Code">
+</div>
+
 </div>
 
 <script>
-    // CHANGE THESE
-    const correctPassword = "newyork2026";
 
-    // Set reveal date
-    const revealDate = new Date("July 28, 2026 00:00:00").getTime();
+const correctPassword = "mybeanforeverx";
 
-    const countdownEl = document.getElementById("countdown");
+const revealDate = new Date("July 28, 2026 00:00:00").getTime();
 
-    function unlockPage() {
-        document.getElementById("lockedContent").style.display = "none";
-        document.getElementById("secret").style.display = "block";
+const countdownEl = document.getElementById("countdown");
+
+function unlockPage(){
+
+    document.getElementById("lockedContent").style.display = "none";
+
+    const secret = document.getElementById("secret");
+
+    secret.style.display = "flex";
+
+    setTimeout(() => {
+
+        secret.style.animation = "fadeIn 2s forwards";
+
+    },100);
+
+}
+
+function checkPassword(){
+
+    const entered = document.getElementById("password").value;
+
+    if(entered === correctPassword){
+
+        unlockPage();
+
+    } else {
+
+        document.getElementById("error").innerHTML =
+        "Wrong password ❤️";
+
     }
 
-    function checkPassword() {
-        const entered = document.getElementById("password").value;
+}
 
-        if (entered === correctPassword) {
-            unlockPage();
-        } else {
-            document.getElementById("error").textContent =
-                "Wrong password ❤️";
-        }
+function updateCountdown(){
+
+    const now = new Date().getTime();
+
+    const distance = revealDate - now;
+
+    if(distance <= 0){
+
+        unlockPage();
+        return;
+
     }
 
-    function updateCountdown() {
-        const now = new Date().getTime();
-        const distance = revealDate - now;
+    const days = Math.floor(distance/(1000*60*60*24));
 
-        if (distance <= 0) {
-            unlockPage();
-            return;
-        }
+    const hours = Math.floor(
+        (distance%(1000*60*60*24))
+        /(1000*60*60)
+    );
 
-        const days = Math.floor(distance / (1000 * 60 * 60 * 24));
-        const hours = Math.floor(
-            (distance % (1000 * 60 * 60 * 24))
-            / (1000 * 60 * 60)
-        );
-        const mins = Math.floor(
-            (distance % (1000 * 60 * 60))
-            / (1000 * 60)
-        );
-        const secs = Math.floor(
-            (distance % (1000 * 60))
-            / 1000
-        );
+    const mins = Math.floor(
+        (distance%(1000*60*60))
+        /(1000*60)
+    );
 
-        countdownEl.textContent =
-            `${days}d ${hours}h ${mins}m ${secs}s`;
-    }
+    const secs = Math.floor(
+        (distance%(1000*60))
+        /1000
+    );
 
-    updateCountdown();
-    setInterval(updateCountdown, 1000);
+    countdownEl.innerHTML =
+        days + "d "
+        + hours + "h "
+        + mins + "m "
+        + secs + "s";
+
+}
+
+updateCountdown();
+
+setInterval(updateCountdown,1000);
+
 </script>
 
 </body>
